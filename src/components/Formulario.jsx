@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const Controlado = () => { 
+const Formulario = () => { 
 
     const [todo, setTodo] = useState({
         title: "Todo #01",
@@ -68,4 +68,4 @@ const Controlado = () => {
     )
 };
 
-export default Controlado;
+export default Formulario;

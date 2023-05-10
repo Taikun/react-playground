@@ -3,36 +3,44 @@ import ButtonState from "./components/ButtonState";
 import ListFruits from "./components/fruits/ListFruits";
 import MyButton from "./components/MyButton";
 import NoControlado from "./components/NoControlado";
-import Controlado from "./components/Controlado";
+import Formulario from "./components/Formulario";
 import WelcomeText from "./components/WelcomeText";
+import Todos from "./components/Todos";
+
+const initialStateTodos = [
+  {
+    id: 1,
+    title: "Todo #01",
+    descripcion: " Descripción #01",
+    state: "pendiente",
+    priority: false,
+  },
+  {
+    id: 2,
+    title: "Todo #02",
+    descripcion: " Descripción #02",
+    state: "pendiente",
+    priority: false,
+  },
+  {
+    id: 3,
+    title: "Todo #03",
+    descripcion: " Descripción #03",
+    state: "pendiente",
+    priority: false,
+  }
+];
 
 const App = () => {
-  const title = "Hello, soy React";
-  const classTitle = "text-center";
-  const fruits = ["🍅", "🍌", "🍐"];
-  const fruitsTwo = ["sandia", "melón", "mango"];
-
-  const user = true;
-  //const pathImg = "src/assets/images/giphy.gif";
+  
+  const [todos, setTodos] = useState([initialStateTodos]);
 
   return (
-    <>
-      <ButtonState />
-      
-      <Controlado/>
-
-
-      <h1 className={classTitle}>{title}</h1>
-      <img src={imgUno} alt={`imagen-${title}`} />
-
-      <MyButton text="botón 1" />
-      <MyButton text="botón 2" />
-      <MyButton text="botón 3" />
-
-      <WelcomeText user={user}></WelcomeText>
-      <ListFruits fruits={fruits} />
-      <ListFruits fruits={fruitsTwo} />
-    </>
+    <div className="container mt-5">
+      <h1 className="my-5">Formularios</h1>
+      <Formulario />
+      <Todos todos={todos} />
+    </div>
   );
 };
 
