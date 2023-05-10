@@ -2,6 +2,8 @@ import imgUno from "./assets/images/giphy.gif";
 import ButtonState from "./components/ButtonState";
 import ListFruits from "./components/fruits/ListFruits";
 import MyButton from "./components/MyButton";
+import NoControlado from "./components/NoControlado";
+import Controlado from "./components/Controlado";
 import WelcomeText from "./components/WelcomeText";
 
 const App = () => {
@@ -16,6 +18,9 @@ const App = () => {
   return (
     <>
       <ButtonState />
+      
+      <Controlado/>
+
 
       <h1 className={classTitle}>{title}</h1>
       <img src={imgUno} alt={`imagen-${title}`} />
